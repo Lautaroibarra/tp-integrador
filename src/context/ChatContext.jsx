@@ -28,8 +28,7 @@ const ChatProvider = ({ children }) => {
       return true
     }
   }
-
-  const register= (userData) => {
+const register= (userData) => {
     
 
 const foundUser = mockUsers.find(user => user.email === userData.email)
@@ -38,7 +37,7 @@ const foundUser = mockUsers.find(user => user.email === userData.email)
 
       return true
     } else {
-      alert("Este mail ya esta en uso, intenta iniciar sesión")
+      alert("Mail ya en uso, proba logearte")
       return false
     }
   }
@@ -61,8 +60,7 @@ const foundUser = mockUsers.find(user => user.email === userData.email)
   const selectedUser = users.find(user => user.id === selectedUserId)
 
   return (
-    <ChatContext.Provider value={{ users, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
-    <ChatContext.Provider value={{ users, handleSelectedUserId, login, register, logout, handleUser, loggedUser, handleMessages, selectedUser }}></ChatContext.Provider>
+    <ChatContext.Provider value={{ users, handleSelectedUserId, login, register, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
       {children}
     </ChatContext.Provider>
   )
