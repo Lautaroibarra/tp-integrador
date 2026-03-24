@@ -5,6 +5,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html{
+  background: conic-gradient(#e72413, #b71c1c, #8e1515, #b71c1c, #e72413);
+  height: max-content;
+}
+
 .app {
   height: 100vh;
   display: flex;
@@ -27,7 +32,7 @@ section {
 
 aside h1 {
   margin-bottom: 5px;
-  color: #8b1e1e;
+  color: #b71c1c;
 }
 
 .search {
@@ -62,7 +67,7 @@ li {
 }
 
 li:hover {
-  background-color: #f2dede;
+  background-color: #f8c0c0;
 }
 
 li img {
@@ -104,16 +109,16 @@ li small {
 
 .chat header button {
   padding: 8px 15px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #a94442;
-  background-color: #c0392b;
+  background-color: #b71c1c;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .chat header button:hover {
-  background-color: #a93226;
+  background-color: #e72413;
 }
 
 .chat-body {
@@ -129,7 +134,7 @@ li small {
 .message {
   max-width: 400px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
   word-wrap: break-word;
   background-color: #ffffff;
@@ -161,14 +166,14 @@ li small {
   padding: 10px;
   display: flex;
   gap: 10px;
-  background-color: #ededed;
+  background-color: #dad7d7;
   border-top: 1px solid #d9d9d9;
 }
 
 .chat-input input {
   flex: 1;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #c9c9c9;
   background-color: #fafafa;
 }
@@ -179,16 +184,16 @@ li small {
 
 .chat-input button {
   padding: 8px 15px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #a94442;
-  background-color: #c0392b;
+  background-color: #b71c1c;
   color: white;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .chat-input button:hover {
-  background-color: #a93226;
+  background-color: #e72413;
   color: #f2f2f2;
 }
 
@@ -223,7 +228,7 @@ li small {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background: conic-gradient(#e72413, #b71c1c, #8e1515, #b71c1c, #e72413);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -239,7 +244,7 @@ li small {
 }
 
 .login-title {
-  color: #8b1e1e;
+  color: #b71c1c;
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
@@ -370,7 +375,6 @@ li small {
   display: inline-block;
   margin-top: 25px;
   padding: 10px 20px;
-  background-color: #666666;
   color: #f5f5f5;
   text-decoration: none;
   border-radius: 6px;
@@ -378,7 +382,7 @@ li small {
 }
 
 .about-link:hover {
-  background-color: #444444;
+  background-color: #bbbbbb;
   color: #ffffff;
 }
 
@@ -452,7 +456,7 @@ li small {
 .about-link {
   display: inline-block;
   margin-top: 15px;
-  color: #8b1e1e;
+  color: #b71c1c;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
