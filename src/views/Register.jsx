@@ -12,7 +12,10 @@ const  [nombre, setNombre] = useState("")
 
   const navigate = useNavigate()
 
-  
+  const handlepage = (e) => {
+  navigate("/Login")
+ }
+
   const handleChangeNombre = (e) => {
     setNombre(e.target.value)
   }
@@ -68,6 +71,7 @@ const  [nombre, setNombre] = useState("")
           error && <p className="error-form">Error al registrarse</p>
         }
       </form>
+      <button onClick={handlepage}>login</button>
     </section>
   )
 }
