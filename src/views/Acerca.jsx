@@ -34,7 +34,7 @@ const Acerca = () => {
 
       <h3 className="about-subtitle">Observaciones</h3>
       <p className="about-text">
-        La interfaz se mantiene simple en los chats, con el objetivo de enfocarse en la
+        La interfaz se mantiene simple, con el objetivo de enfocarse en la
         funcionalidad y la correcta persistencia de datos.
       </p>
 
