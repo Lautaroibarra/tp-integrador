@@ -198,6 +198,7 @@ li small {
 }
 
 /* Not Found styles */
+
 .cont-not-found {
   height: 100vh;
   display: flex;
@@ -337,6 +338,7 @@ li small {
 }
 
 /* About Page Styles */
+
 .about-page {
   max-width: 800px;
   margin: 40px auto;
@@ -386,7 +388,8 @@ li small {
   color: #ffffff;
 }
 
-/* Register Page - estilo rojo y gris */
+/* Register Page*/
+
 .register-page {
   max-width: 400px;
   margin: 50px auto;

@@ -1,16 +1,136 @@
-# React + Vite
+# Chat UTN - Trabajo Práctico Final
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web de mensajería desarrollada como trabajo práctico final para la materia Desarrollo Web Frontend.
 
-Currently, two official plugins are available:
+El proyecto consiste en un sistema de chat con gestión de usuarios, persistencia de sesión y navegación entre distintas vistas, aplicando conceptos modernos de React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## React Compiler
+### Funcionalidades obligatorias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Registro de usuario (`/registro`)
+* Validaciones de formulario:
 
-## Expanding the ESLint configuration
+  * Nombre (mínimo 3 caracteres)
+  * Email (formato válido)
+  * Contraseña (mínimo 6 caracteres)
+* Persistencia de usuario con Context
+* Sesión mantenida incluso al recargar la página
+* Página pública de documentación (`/acerca`)
+* Sistema de chat funcional
+* Diseño responsive (incluye menú lateral ocultable en mobile)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Funcionalidades extra
+
+* Login / Logout
+* Sidebar responsive con botón hamburguesa
+* UI personalizada (tema rojo/gris)
+* Buscador de usuarios en tiempo real
+* Mensajes dinámicos
+
+## Tecnologías utilizadas
+
+* React
+* Vite
+* JavaScript (ES6+)
+* CSS3 (Flexbox + Responsive Design)
+* React Context API
+* React Router
+
+## Estructura del proyecto
+
+src/
+* components/
+  * Aside.jsx
+  * Chat.jsx
+* context/
+  * ChatContext.jsx
+* pages/
+  * Login.jsx
+  * Register.jsx
+  * About.jsx
+* styles/
+  * main.css
+* App.jsx
+
+
+## Instalación y ejecución
+
+1. Clonar el repositorio:
+
+bash
+git clone https://github.com/Lautaroibarra/tp-integrador
+
+
+2. Entrar a la carpeta:
+
+bash
+cd tp-integrador
+
+3. Instalar dependencias:
+
+bash
+npm install
+
+4. Ejecutar el proyecto:
+
+bash
+npm run dev
+
+## Deploy
+
+El proyecto está preparado para ser desplegado en:
+
+* Vercel
+
+Pasos básicos:
+
+1. Subir el repositorio a GitHub
+2. Conectar con Vercel
+3. Deploy automático
+
+## Decisiones de desarrollo
+
+* Uso de Context API para manejar estado global
+* Separación en componentes (Aside, Chat)
+* Implementación de diseño responsive tipo aplicación móvil
+* Manejo de rutas con React Router
+* Validaciones del lado del cliente para mejorar UX
+
+## Página de documentación
+
+El proyecto incluye una página accesible públicamente:
+
+/acerca
+
+Contiene:
+
+* Explicación del proyecto
+* Tecnologías utilizadas
+* Decisiones técnicas
+* Observaciones personales
+
+## Dificultades encontradas
+
+* Manejo de estado entre componentes (Aside y Chat)
+* Implementación del menú responsive
+* Persistencia del usuario al recargar la página
+* Adaptación de SVG a JSX
+
+## Autor
+
+**Lautaro Agustín Ibarra**
+
+## Estado del proyecto
+
+Funcional
+Cumple con los requisitos obligatorios
+Listo para deploy
+
+---
+
+## Links
+
+* Repositorio: https://github.com/Lautaroibarra/tp-integrador
+* Deploy: tp-integrador-pearl.vercel.app
+* DeepWiki: https://deepwiki.com/Lautaroibarra/tp-integrador
