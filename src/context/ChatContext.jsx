@@ -29,6 +29,20 @@ const ChatProvider = ({ children }) => {
     }
   }
 
+  const register= (userData) => {
+    
+
+const foundUser = mockUsers.find(user => user.email === userData.email)
+    if (!foundUser) {
+      console.log(userData)
+
+      return true
+    } else {
+      alert("Este mail ya esta en uso, intenta iniciar sesión")
+      return false
+    }
+  }
+
   const logout = () => {
     localStorage.removeItem("user")
   }
@@ -48,6 +62,7 @@ const ChatProvider = ({ children }) => {
 
   return (
     <ChatContext.Provider value={{ users, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
+    <ChatContext.Provider value={{ users, handleSelectedUserId, login, register, logout, handleUser, loggedUser, handleMessages, selectedUser }}></ChatContext.Provider>
       {children}
     </ChatContext.Provider>
   )
