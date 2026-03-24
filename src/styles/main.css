@@ -7,16 +7,16 @@
 
 .app {
   height: 100vh;
-  background-color: yellowgreen;
   display: flex;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 aside {
-  background-color: #f0f2f5;
+  background-color: #ededed;
   width: 260px;
   padding: 20px;
   overflow-y: scroll;
+  border-right: 1px solid #d9d9d9;
 }
 
 section {
@@ -27,6 +27,7 @@ section {
 
 aside h1 {
   margin-bottom: 5px;
+  color: #8b1e1e;
 }
 
 .search {
@@ -35,13 +36,14 @@ aside h1 {
   width: 100%;
   display: block;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #c9c9c9;
+  background-color: #fafafa;
 }
 
 .not-found-text {
   font-size: 14px;
   text-align: center;
-  color: gray;
+  color: #8a8a8a;
 }
 
 ul {
@@ -52,14 +54,15 @@ li {
   margin-bottom: 10px;
   display: flex;
   border-radius: 4px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dcdcdc;
   padding: 10px;
   cursor: pointer;
   gap: 10px;
+  transition: background-color 0.2s;
 }
 
 li:hover {
-  background-color: #e6e6e6;
+  background-color: #f2dede;
 }
 
 li img {
@@ -69,7 +72,7 @@ li img {
 
 li small {
   display: block;
-  color: gray;
+  color: #666;
 }
 
 /* chat styles */
@@ -86,26 +89,31 @@ li small {
 }
 
 .chat-cont-empty p {
-  color: gray;
+  color: #9a9a9a;
 }
 
 .chat header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 4px solid #b71c1c;
   padding: 15px;
-  background-color: #fafafa;
+  background-color: #e6e6e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #333;
 }
 
 .chat header button {
   padding: 8px 15px;
   border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
-  color: white;
+  border: 1px solid #a94442;
+  background-color: #c0392b;
+  color: #ffffff;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
+}
+
+.chat header button:hover {
+  background-color: #a93226;
 }
 
 .chat-body {
@@ -115,20 +123,22 @@ li small {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  background-color: #f7f7f7;
 }
 
 .message {
-  background-color: yellow;
   max-width: 400px;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.192);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
   word-wrap: break-word;
-  background-color: #e4e6eb;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  color: #222;
 }
 
 .message .timestamp {
-  color: gray;
+  color: #888;
   font-size: 12px;
   text-align: end;
   margin-top: 5px;
@@ -139,9 +149,10 @@ li small {
 }
 
 .me {
-  background-color: rgb(194, 236, 194);
+  background-color: #f2dede;
   align-self: end;
   max-width: 400px;
+  border: 1px solid #e0b4b4;
 }
 
 /* input styles */
@@ -150,32 +161,35 @@ li small {
   padding: 10px;
   display: flex;
   gap: 10px;
+  background-color: #ededed;
+  border-top: 1px solid #d9d9d9;
 }
 
 .chat-input input {
   flex: 1;
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #c9c9c9;
+  background-color: #fafafa;
 }
 
 .chat-input input:focus {
-  outline: 1px solid #9c9c9c;
+  outline: 1px solid #b71c1c;
 }
 
 .chat-input button {
   padding: 8px 15px;
   border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
+  border: 1px solid #a94442;
+  background-color: #c0392b;
   color: white;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .chat-input button:hover {
-  color: #888888;
-  background-color: white;
+  background-color: #a93226;
+  color: #f2f2f2;
 }
 
 /* Not Found styles */
@@ -185,11 +199,12 @@ li small {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #f4f4f4;
 }
 
 .cont-not-found a {
   display: block;
-  background-color: rgb(79, 79, 79);
+  background-color: #555555;
   padding: 8px 16px;
   text-decoration: none;
   color: white;
@@ -198,65 +213,251 @@ li small {
 }
 
 .cont-not-found a:hover {
-  background-color: rgb(123, 123, 123);
+  background-color: #777777;
 }
 
 /* login styles */
 
-/* Login styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-section form {
-  max-width: 360px;
-  margin: 30px auto;
+.login-box {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.login-title {
+  color: #8b1e1e;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.login-subtitle {
+  color: #777;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  background-color: #ffffff;
-  padding: 24px;
+  gap: 1.2rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #b71c1c;
+  box-shadow: 0 0 0 2px rgba(183, 28, 28, 0.1);
+}
+
+.btn-primary {
+  background-color: #b71c1c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #8e1515;
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  color: #b71c1c;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 5px;
+}
+
+.error-message {
+  color: #a94442;
+  background: #f8e6e6;
+  padding: 10px;
   border-radius: 6px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
 }
 
-section .title-login {
+.login-footer {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.login-footer p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #8b1e1e;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  color: #b71c1c;
+}
+
+/* About Page Styles */
+.about-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  border: 1px solid #dddddd;
+}
+
+.about-title {
   text-align: center;
-  margin-top: 60px;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #8b1e1e;
+}
+
+.about-subtitle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
   font-weight: 500;
+  color: #555;
 }
 
-section form input {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+.about-text {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #666666;
+  color: #f5f5f5;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.about-link:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+/* Register Page - estilo rojo y gris */
+.register-page {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #efefef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  border: 1px solid #d9d9d9;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #8b1e1e;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-input {
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #cfcfcf;
   font-size: 14px;
+  transition: all 0.2s;
+  background-color: #fafafa;
 }
 
-section form input:focus {
-  outline: 1px solid #9c9c9c;
+.register-input:focus {
+  outline: none;
+  border-color: #b71c1c;
+  box-shadow: 0 0 5px rgba(183, 28, 28, 0.25);
 }
 
-section form button {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
+.register-button,
+.login-button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background-color: #b71c1c;
   color: white;
   cursor: pointer;
-  transition: all .2s;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 16px;
 }
 
-section form button:hover {
-  background-color: white;
-  color: #888888;
+.register-button:hover,
+.login-button:hover {
+  background-color: #8e1515;
 }
 
 .error-form {
-  text-align: center;
-  color: rgb(216, 26, 26);
-  font-size: 15px;
+  color: #a94442;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 880px) {
-  aside {
-    display: none;
-  }
+.about-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #8b1e1e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.about-link:hover {
+  color: #b71c1c;
 }
